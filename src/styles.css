@@ -1,0 +1,141 @@
+#preciototal {
+  color: rgb(109, 109, 109);
+}
+.container-fluid {
+  width: 90%;
+}
+.cesta {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  top: 0;
+}
+.card {
+  width: 100%;
+  display: block;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.23);
+  z-index: 10;
+}
+.card-disbled {
+  opacity: 0.5;
+}
+
+.precio {
+  display: inline;
+  float: left;
+  font-size: 1.15rem;
+}
+
+.stock {
+  display: inline;
+  float: right;
+}
+
+.cesta img {
+  width: 80px;
+}
+body {
+  font-family: sans-serif;
+}
+
+.toggle-btn {
+  position: relative;
+  display: block;
+
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.arrow {
+  position: absolute;
+  top: 20px;
+  right: 2px;
+}
+
+.arrow::before,
+.arrow::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 2px;
+  background: black;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow::before {
+  transform: rotate(45deg);
+}
+
+.arrow::after {
+  left: 6px;
+  top: -1px;
+  transform: rotate(-45deg);
+}
+
+.toggle-btn.active .arrow::before {
+  transform: rotate(-45deg);
+}
+
+.toggle-btn.active .arrow::after {
+  transform: rotate(45deg);
+}
+
+.popup-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+}
+
+.popup {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+
+.popup button {
+  background: rgb(8, 8, 8);
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  margin: 30px auto;
+  display: block;
+  width: 50%;
+}
+
+.popup a:hover {
+  background: palevioletred;
+  transition: all 0.2s;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.inner {
+  width: 500px;
+  margin: auto;
+  background: transparent;
+  padding: 0px 55px 45px 55px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
